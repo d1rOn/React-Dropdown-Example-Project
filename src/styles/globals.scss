@@ -1,0 +1,78 @@
+@import './common';
+
+$media-desktop: 1560px;
+$media-mobile: 768px;
+
+:root {
+  // ----- page settings -----
+  --page-font-family: montserrat, -apple-system, roboto, sans-serif;
+  --page-font-size: 16px;
+
+  // ----- font-sizes --------
+  --label-text-size: 0.875rem; // 14px
+  --text-mid-size: 1.125rem; // 18px
+  --text-big-size: 1.25rem; // 20px
+
+  // ------ line-height ------
+  --label-text-lh: 1.21em;
+
+  // ------ form-style ------
+  --form-control-height: 3.125rem;
+  --form-control-paddings-inline: 1rem;
+  --form-control-text-size: 0.875rem; // 14px
+  --input-border-color: #d1d5db;
+  --input-background-color: #fff;
+  --input-hover-border-color: #fff;
+  --input-border-width: 1px;
+  --input-border-radius: 8px;
+  --checkbox-border-color: #303030; // $black-color
+  --checkbox-checked-background: linear-gradient(
+    66.04deg,
+    #ff9400 0%,
+    #f70000 100%
+  ); // $primary-gradient;
+
+  --white: #fff;
+
+  @include media-mobile {
+    // ------- font sizes ------------
+
+    --label-text-size: 0.625rem;
+    --text-big-size: 0.875rem;
+    --text-mid-size: 0.875rem; // 18px
+
+    // ------ line height ----------
+
+    --label-text-lh: 1.2em;
+
+    // ------ form-style ------
+    --form-control-height: 36px;
+    --form-control-text-size: 0.75rem; // 12px
+  }
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: var(--page-font-family);
+  font-size: var(--page-font-size);
+  color: $main-text-color;
+  scroll-behavior: smooth;
+
+  @media (width >= $media-mobile) and (width <= $media-desktop) {
+    font-size: 12px;
+  }
+}
+
+* {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: rgb(255 255 255 / 0%);
+}

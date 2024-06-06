@@ -1,0 +1,22 @@
+.demoBox {
+  width: 1000px;
+  max-width: 98vw;
+  padding: 24px;
+  margin: auto;
+  border-radius: 10px;
+  box-shadow: 0 0 26px -2px rgb(0 0 0 / 52%);
+
+  form {
+    display: grid;
+    grid-template: repeat(2, auto) / repeat(2, auto);
+    grid-template-areas:
+      'select1 select2'
+      'select3 select3';
+    gap: 20px 20px;
+  }
+
+  fieldset {
+    padding: 0;
+    border: 0;
+  }
+}
